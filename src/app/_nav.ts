@@ -1,30 +1,54 @@
 export const navItems = [
   {
-    name: 'Dashboard',
+    name: 'Tableau de bord',
     url: '/dashboard',
     icon: 'icon-speedometer',
     badge: {
-      variant: 'info',
-      text: 'NEW'
+      variant: 'info'
     }
   },
   {
     title: true,
-    name: 'Theme'
+    name: 'Paramétrage'
   },
   {
-    name: 'Colors',
+    name: 'Utilisateurs',
     url: '/theme/colors',
     icon: 'icon-drop'
   },
   {
-    name: 'Typography',
+    name: 'Modules',
+    url: '/theme/typography',
+    icon: 'icon-pencil'
+  },
+  {
+    name: 'Sous Modules',
     url: '/theme/typography',
     icon: 'icon-pencil'
   },
   {
     title: true,
-    name: 'Components'
+    name: 'Emissions'
+  },
+  {
+    title: true,
+    name: 'Acquision'
+  },
+  {
+    title: true,
+    name: 'Operations'
+  },
+  {
+    title: true,
+    name: 'Rapport'
+  },
+  {
+    title: true,
+    name: 'Traitement'
+  },
+  {
+    title: true,
+    name: 'Switch'
   },
   {
     name: 'Base',
@@ -214,18 +238,5 @@ export const navItems = [
         icon: 'icon-star'
       }
     ]
-  },
-  {
-    name: 'Download CoreUI',
-    url: 'http://coreui.io/angular/',
-    icon: 'icon-cloud-download',
-    class: 'mt-auto',
-    variant: 'success'
-  },
-  {
-    name: 'Try CoreUI PRO',
-    url: 'http://coreui.io/pro/angular/',
-    icon: 'icon-layers',
-    variant: 'danger'
   }
 ];

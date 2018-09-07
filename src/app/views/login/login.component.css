@@ -1,0 +1,20 @@
+.login-img-section{
+   background-image: url('../../../assets/img/logo-apg.png');
+   background-repeat: no-repeat;
+   background-size: 50% 100%;
+   height: 165px;
+   background-position: center;
+}
+.info-section{
+    height: calc(100% - 120px);
+    color: dimgrey;
+}
+
+/* form validation */
+.ng-valid[required], .ng-valid.required  {
+    border-right: 5px solid #42A948; /* green */
+  }
+  
+  .ng-invalid:not(form)  {
+    border-right: 5px solid #f90e02; /* red */
+  }
