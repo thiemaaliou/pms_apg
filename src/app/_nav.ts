@@ -13,42 +13,52 @@ export const navItems = [
   },
   {
     name: 'Utilisateurs',
-    url: '/theme/colors',
-    icon: 'icon-drop'
+    url: '/users',
+    icon: 'icon-people'
   },
   {
     name: 'Modules',
     url: '/theme/typography',
-    icon: 'icon-pencil'
+    icon: 'icon-wrench'
   },
   {
     name: 'Sous Modules',
     url: '/theme/typography',
-    icon: 'icon-pencil'
+    icon: 'icon-puzzle'
   },
   {
     title: true,
-    name: 'Emissions'
+    name: ''
   },
   {
-    title: true,
-    name: 'Acquision'
+    name: 'Emissions',
+    url: '/theme/typography',
+    icon: 'icon-cursor'
   },
   {
-    title: true,
-    name: 'Operations'
+    name: 'Acquision',
+    url: '/theme/typography',
+    icon: 'icon-calculator'
   },
   {
-    title: true,
-    name: 'Rapport'
+    name: 'Operations',
+    url: '/theme/typography',
+    icon: 'icon-pie-chart'
   },
   {
-    title: true,
-    name: 'Traitement'
+    name: 'Rapport',
+    url: '/theme/typography',
+    icon: 'icon-chart'
   },
   {
-    title: true,
-    name: 'Switch'
+    name: 'Traitement',
+    url: '/theme/typography',
+    icon: 'icon-note'
+  },
+  {
+    name: 'Switch',
+    url: '/theme/typography',
+    icon: 'icon-list'
   },
   {
     name: 'Base',

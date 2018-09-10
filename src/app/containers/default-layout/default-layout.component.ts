@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import {Router} from '@angular/router'
 import { navItems } from './../../_nav';
 
 @Component({
@@ -10,7 +11,10 @@ export class DefaultLayoutComponent {
   public sidebarMinimized = true;
   private changes: MutationObserver;
   public element: HTMLElement = document.body;
-  constructor() {
+  constructor( private router: Router) {
+
+    if(window.localStorage.getItem('sessionId') == null || window.localStorage.getItem('sessionId') == undefined)
+        this.router.navigate(['/login']);
 
     this.changes = new MutationObserver((mutations) => {
       this.sidebarMinimized = document.body.classList.contains('sidebar-minimized');
@@ -19,5 +23,10 @@ export class DefaultLayoutComponent {
     this.changes.observe(<Element>this.element, {
       attributes: true
     });
+  }
+
+  logout(){
+    window.localStorage.setItem('sessionId', null);
+    this.router.navigate(['/login']);
   }
 }

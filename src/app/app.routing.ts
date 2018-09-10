@@ -47,7 +47,7 @@ export const routes: Routes = [
     path: '',
     component: DefaultLayoutComponent,
     data: {
-      title: 'Home'
+      title: 'Accueil'
     },
     children: [
       {
@@ -81,6 +81,10 @@ export const routes: Routes = [
       {
         path: 'widgets',
         loadChildren: './views/widgets/widgets.module#WidgetsModule'
+      },
+      {
+        path: 'users',
+        loadChildren: './views/user/user.module#UserModule'
       }
     ]
   }

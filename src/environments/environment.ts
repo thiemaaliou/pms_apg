@@ -6,4 +6,5 @@
 export const environment = {
   production: false,
   baseApiUrl: 'https://172.16.2.242/api/administration/',
+  flashcode: '@PG2@18APG2018P@SS@PG2@18',
 };

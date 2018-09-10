@@ -6,14 +6,16 @@
           <div class="card-group">
             <div class="card p-4">
               <div class="card-body">
-                <form #loginForm="ngForm" (ngSubmit)="login(loginForm)" no-validate>
+                <form #loginForm="ngForm" (ngSubmit)="login(loginForm)" novalidate>
                   <h1>Connexion</h1>
                   <p class="text-muted">Renseignez vos identifiants pour vous connectez</p>
+                  <p class="text-success" *ngIf="tokenValid">Connexion réussie. Vous allez être redirigé dans 1s</p>
+
                   <div class="input-group mb-3" *ngIf="!isloged">
                     <div class="input-group-prepend" >
                       <span class="input-group-text"><i class="icon-user"></i></span>
                     </div>
-                    <input type="email" #email="ngModel" name="username" id="username"  class="form-control" placeholder="Nom d'utilisateur" [(ngModel)]="userCredentials.credentials.username" autocomplete="off" required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+                    <input type="text" #email="ngModel" name="username" id="username"  class="form-control" placeholder="Nom d'utilisateur" [(ngModel)]="userCredentials.credentials.username" autocomplete="off" required>
                   </div>
                   <!-- <div  *ngIf="email.errors && email.errors.pattern">
                       Email non valid
@@ -29,6 +31,9 @@
                         <span class="input-group-text"><i class="icon-lock"></i></span>
                       </div>
                       <input type="text" name="token" class="form-control" placeholder="Token"  [(ngModel)]="userCredentials.credentials.token" autocomplete="off" required>
+                  </div>
+                  <div class="input-group mb-4" *ngIf="isloged">
+                    <a href="#" (click)="isloged = !isloged">Retour sur l'interface de connexion</a>
                   </div>
                   <div class="row">
                     <div class="col-6">

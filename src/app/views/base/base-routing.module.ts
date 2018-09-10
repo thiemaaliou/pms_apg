@@ -95,7 +95,7 @@ const routes: Routes = [
         component: TooltipsComponent,
         data: {
           title: 'Tooltips'
-        }
+        },
       }
     ]
   }

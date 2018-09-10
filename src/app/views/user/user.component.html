@@ -1,0 +1,128 @@
+
+  <div class="animated fadeIn">
+      <div class="card">
+        <div class="card-header">
+         Gestion utilisateurs
+          <div class="card-header-actions">
+            <a target="_blank">
+                <button type="button" class="btn btn-primary full-right"
+                    (click)="isCollapsed = !isCollapsed"><i class="fa fa-plus"></i>
+                </button>
+            </a>
+          </div>
+        </div>
+        <div class="card-body">
+            <div class="card-body"
+                (collapsed)="collapsed($event)"
+                (expanded)="expanded($event)"
+                [collapse]="isCollapsed">
+                <div class="col-sm-12">
+                  <div class="card">
+                    <div class="card-header">
+                      <strong>Ajouter un utlisateur</strong>
+                    </div>
+                    <div class="card-body">
+                      <form #addUserForm="ngForm" (ngSubmit)="AddUser(addUserForm)" novalidate>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                              <label for="first_name" class="text-bold">Pr&eacute;nom <span class="text-red">*</span></label>
+                              <input type="text" class="form-control" id="first_name" name="first_name" [(ngModel)]="user.first_name" placeholder="Entrer le prenom">
+                            </div>
+                            <div class="form-group col-md-6">
+                              <label for="last_name" class="text-bold">Nom <span class="text-red">*</span></label>
+                              <input type="text" class="form-control" id="last_name" name="last_name" [(ngModel)]="user.last_name" placeholder="Entrer le nom">
+                            </div>
+                        </div>
+                        <div class="row">
+                          <div class="form-group col-md-6">
+                            <label for="email" class="text-bold">Email <span class="text-red">*</span></label>
+                            <input type="email" class="form-control" id="email" name="email" [(ngModel)]="user.email" placeholder="Entrer l'email">
+                          </div>
+                        
+                            <div class="form-group col-md-6">
+                              <label for="address" class="text-bold">Adresse <span class="text-red">*</span></label>
+                              <input type="text" class="form-control" id="address" name="address" [(ngModel)]="user.address" placeholder="Entrer l'adresse">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                              <label for="phone" class="text-bold">T&eacute;l&eacute;phone <span class="text-red">*</span></label>
+                              <input type="text" class="form-control" name="phone" [(ngModel)]="user.phone" id="phone" placeholder="Entrer le telephone">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="cni" class="text-bold">CNI</label>
+                                <input type="text" class="form-control" name="cni" id="cni" [(ngModel)]="user.cni" placeholder="Numero d'identification national">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                              <label for="genre" class="text-bold">Genre <span class="text-red">*</span></label>
+                              <select id="genre" name="genre" class="form-control" [(ngModel)]="user.genre">
+                                  <option value="">S&eacute;lectionner un genre</option>
+                                  <option *ngFor="let genre of genres" [value]="genre.id">{{genre.name}}</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="cni" class="text-bold">Profil <span class="text-red">*</span></label>
+                                <input type="text" class="form-control" id="cni" placeholder="Numero d'identification national">
+                            </div>
+                        </div>
+                        <div class="row col-md-12 add-user-actions">
+                            <button type="submit" class="btn btn-success px-4 col">Enregistrer</button>
+                            <button type="submit" class="btn btn-danger px-4 col" (click)="resetAddUserAction()">Annuler</button>
+                        </div>
+                      </form>
+                      </div><!--/.row-->
+                    </div>
+                  </div>
+                </div><!--/.col-->
+            </div>
+        <!-- table users liste-->
+        <div class="col-lg-12">
+            <div class="card">
+              <div class="card-header">
+                <i class="fa fa-align-justify"></i> Liste des Utilisateurs
+              </div>
+              <div class="card-body">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th>Prénom</th>
+                      <th>Nom</th>
+                      <th>Email</th>
+                      <th>Téléphone</th>
+                      <th>Profil</th>
+                      <td>Statut</td>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>APG</td>
+                      <td>USER</td>
+                      <td>admin@apg.com</td>
+                      <td>330000000</td>
+                      <td>Administrateur</td>
+                      <td>
+                        <span class="badge badge-success">Active</span>
+                      </td>
+                      <td class="action-column">
+                        <i class="nav-icon icon-user-follow edit"></i>
+                        <i class="nav-icon icon-user-unfollow delete"></i>
+                      </td>
+                    </tr>
+                   
+                  </tbody>
+                </table>
+                <ul class="pagination">
+                  <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+                  <li class="page-item active">
+                    <a class="page-link">1</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        <!--end users liste-->
+    </div>
+  </div>

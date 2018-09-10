@@ -34,7 +34,7 @@
         <a class="dropdown-item"><i class="fa fa-bell-o"></i> Updates</a>
         <a class="dropdown-item"><i class="fa fa-envelope-o"></i> Messages</a>
         <a class="dropdown-item"><i class="fa fa-tasks"></i> Tasks</a>
-        <a class="dropdown-item"><i class="fa fa-logout"></i> Deconnexion</a>
+        <a class="dropdown-item"  (click)="logout()" ><i class="fa fa-sign-out" ></i> Deconnexion</a>
       </div>
     </li>
   </ul>
@@ -63,7 +63,7 @@
           <div class="list-group-item list-group-item-accent-secondary bg-light text-center font-weight-bold text-muted text-uppercase small">Today</div>
           <div class="list-group-item list-group-item-accent-warning list-group-item-divider">
             <div class="avatar float-right">
-              <img class="img-avatar" src="assets/img/avatars/7.jpg" alt="admin@bootstrapmaster.com">
+              <img class="img-avatar" src="assets/img/avatars/7.jpg" alt="">
             </div>
             <div>Meeting with
               <strong>Lucas</strong>

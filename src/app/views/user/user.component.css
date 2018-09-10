@@ -1,0 +1,16 @@
+.action-column i{
+    padding-right: 15px;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+.action-column i.edit{
+    color: #ffb231f2;
+}
+.action-column i.delete{
+    color: #d6080b
+}
+.add-user-actions button{
+    max-width: 150px;
+    font-size: 18px;
+    margin-right: 10px;
+}
